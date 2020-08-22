@@ -41,28 +41,28 @@ body {
 }
 
 .skin .pattern.left1 {
-    background-image: url('/pattern-left1.412118ea.jpg');
+    background-image: url('pattern-left1.ca97e00a.jpg');
     transform: translate(-168px, 64px);
     width: 48px;
     height: 66px;
 }
 
 .skin .pattern.left2 {
-    background-image: url('/pattern-left2.9e9fd369.jpg');
+    background-image: url('pattern-left2.6a8876d8.jpg');
     transform: translate(-198px, -20px);
     width: 34px;
     height: 84px;
 }
 
 .skin .pattern.right1 {
-    background-image: url('/pattern-right1.55448f7e.jpg');
+    background-image: url('pattern-right1.41aa6afe.jpg');
     transform: translate(95px, 72px);
     width: 72px;
     height: 56px;
 }
 
 .skin .pattern.right2 {
-    background-image: url('/pattern-right2.58c8a43b.jpg');
+    background-image: url('pattern-right2.fa97918e.jpg');
     transform: translate(156px, -20px);
     width: 34px;
     height: 86px;
@@ -379,4 +379,4 @@ body {
     animation: wave 300ms infinite linear;
 }
 
-/*# sourceMappingURL=/style.e308ff8e.css.map */
+/*# sourceMappingURL=style.4af5f00d.css.map */
