@@ -215,7 +215,7 @@ body {
     content: '';
     display: block;
     border: 2px solid black;
-    margin-left:15px;
+    margin-left: 15px;
     margin-top: 14px;
     width: 38px;
     height: 6px;
@@ -228,7 +228,7 @@ body {
     display: block;
     border: 2px solid black;
     margin-left: 21px;
-    margin-top:-17px;
+    margin-top: -17px;
     width: 26px;
     height: 36px;
     transform: translateY(-8px);
@@ -281,4 +281,108 @@ body {
 .ears .right {
     margin-left: 24px;
     transform: rotate(-6deg) rotateY(180deg);
+}
+
+.mouse > li {
+    position: absolute;
+    border: 2px solid black;
+    top:50%;
+    left:50%;
+    margin-top:66px;
+    width: 36px;
+    height: 15px;
+    border-radius: 72% 0% 100% 40%/60% 0% 100% 70%;
+    border-color: transparent transparent black black;
+}
+
+.mouse .left {
+    margin-left:-32px;
+    transform: translate(52px, 15px) rotate(-6deg);
+    animation: shakeForLeft 800ms infinite linear;
+    transform-origin: 100% 100%;
+}
+
+.mouse .right {
+    margin-left:-44px;
+    transform-origin: 100% 0%;
+    animation: shakeForRight 800ms infinite linear;
+}
+
+
+/*动画效果*/
+@keyframes shakeForLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(1deg);
+    }
+
+    66% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes shakeForRight {
+    0% {
+        transform: rotateZ(0deg) rotateY(180deg);
+    }
+
+    33% {
+
+        transform: rotateZ(-1deg) rotateY(180deg);
+    }
+
+    66% {
+
+        transform: rotateZ(3deg) rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg) rotateY(180deg);
+    }
+}
+
+@keyframes shakeForNose {
+    0% {
+        transform: translateY(0px);
+    }
+
+    33% {
+        transform: translateY(2px);
+
+    }
+
+    66% {
+        transform: translateY(-2px);
+
+    }
+
+    100% {
+        transform: translateY(0px);
+
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(5deg);
+    }
+
+    66% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
