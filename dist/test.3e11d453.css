@@ -171,8 +171,10 @@ body {
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(54%, -190%);
-
+    margin-left:34px;
+    margin-top:-145px;
+    transform-origin: 50% 100%;
+    animation: tail-wave 300ms infinite linear;
 }
 
 /*画头*/
@@ -195,7 +197,7 @@ body {
 
 /*画眼睛*/
 .head .eye > li {
-    width: 70px;
+    width: 60px;
     height: 20px;
     border: 2px solid black;
     border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
@@ -204,18 +206,18 @@ body {
 }
 
 .eye .leftLid {
-    transform: translate(-52px, 36px) rotate(8deg);
+    transform: translate(-52px, 54px) rotate(8deg);
 }
 
 .eye .rightLid {
-    transform: translate(52px, 15px) rotate(-8deg);
+    transform: translate(52px, 34px) rotate(-8deg);
 }
 
 .eye .leftLid::before {
     content: '';
     display: block;
     border: 2px solid black;
-    margin-left: 15px;
+    margin-left: 11px;
     margin-top: 14px;
     width: 38px;
     height: 6px;
@@ -229,7 +231,7 @@ body {
     border: 2px solid black;
     margin-left: 21px;
     margin-top: -17px;
-    width: 26px;
+    width: 22px;
     height: 36px;
     transform: translateY(-8px);
     background: black;
@@ -240,7 +242,7 @@ body {
     display: block;
     border: 2px solid black;
     margin-top: 14px;
-    margin-left: 15px;
+    margin-left: 11px;
     width: 38px;
     height: 6px;
     border-color: black transparent transparent transparent;
@@ -251,7 +253,7 @@ body {
     content: '';
     display: block;
     border: 2px solid black;
-    width: 26px;
+    width: 22px;
     height: 36px;
     margin-left: 21px;
     margin-top: -17px;
@@ -260,7 +262,7 @@ body {
 }
 
 /*画耳朵*/
-.ears > * {
+.ears > li {
     position: absolute;
     border: 2px solid black;
     top: 50%;
@@ -288,7 +290,7 @@ body {
     border: 2px solid black;
     top:50%;
     left:50%;
-    margin-top:66px;
+    margin-top:76px;
     width: 36px;
     height: 15px;
     border-radius: 72% 0% 100% 40%/60% 0% 100% 70%;
@@ -307,6 +309,78 @@ body {
     transform-origin: 100% 0%;
     animation: shakeForRight 800ms infinite linear;
 }
+.nose>li{
+    position: absolute;
+    border: 2px solid black;
+    width: 16px;
+    height: 13px;
+    top:50%;
+    left:50%;
+    margin-top: 70px;
+    border-color: transparent transparent black transparent;
+}
+.nose .left {
+    transform: translate(-86%,-50%) rotate(26deg);
+}
+
+.nose .right {
+    transform: translate(-38%,-50%) rotate(-26deg) rotateY(180deg);
+}
+/* 头上的颜色 */
+.head::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top:50%;
+    left:50%;
+    width: 100px;
+    height: 188px;
+    background: linear-gradient(90deg,
+    rgba(244, 173, 107, 1) 50%,
+    rgba(122, 113, 108, 1) 50%);
+    border-radius: 52% 45% 56% 60%/65% 60% 40% 40%;
+    transform:translate(-50%,-50%) rotate(5deg);
+    margin-top:-60px;
+    z-index: 100;
+}
+.face>li{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:scale(0.4) translate(-50%,-50%);
+    background-repeat: no-repeat;
+}
+.face .left1 {
+    background-image: url('/pattern-left1.412118ea.jpg');
+    width: 48px;
+    height: 66px;
+    margin-left:-100px;
+    margin-top: 43px;
+}
+
+.face .left2 {
+    background-image: url('/pattern-left2.9e9fd369.jpg');
+    width: 34px;
+    height: 84px;
+    margin-left:-114px;
+    margin-top: 0px;
+}
+.face .right1 {
+    background-image: url('/pattern-right1.55448f7e.jpg');
+    width: 72px;
+    height: 56px;
+    margin-left:58px;
+    margin-top: 46px;
+}
+
+.face .right2 {
+    background-image: url('/pattern-right2.58c8a43b.jpg');
+    width: 34px;
+    height: 86px;
+    margin-left:89px;
+    margin-top: 0px;
+}
+
 
 
 /*动画效果*/
@@ -369,7 +443,7 @@ body {
     }
 }
 
-@keyframes wave {
+@keyframes tail-wave {
     0% {
         transform: rotate(0deg);
     }
