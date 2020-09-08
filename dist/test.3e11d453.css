@@ -23,20 +23,17 @@ body {
 
 #css-player {
     height: 45vh;
-    border: 1px solid red;
     width: 100%;
 }
 
 #controller {
     height: 10vh;
-    border: 1px solid red;
     width: 100%;
     background: white;
 }
 
 #html-player {
     height: 45vh;
-    border: 1px solid red;
     width: 100%;
 }
 
@@ -63,19 +60,16 @@ body {
 
     #css-player {
         height: 100%;
-        border: 1px solid red;
         width: 45vw;
     }
 
     #controller {
         height: 100%;
-        border: 1px solid red;
         width: 10vw;
     }
 
     #html-player {
         height: 100%;
-        border: 1px solid red;
         width: 45vw;
     }
 
@@ -93,7 +87,7 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 @media (min-width: 500px) {
@@ -143,7 +137,6 @@ body {
     width: 300px;
     height: 300px;
     background: rgb(122, 123, 118);
-    /*transform: translate(255px, -111px);*/
     left: 50%;
     margin-top: -70px;
 }
@@ -327,7 +320,7 @@ body {
     transform: translate(-38%,-50%) rotate(-26deg) rotateY(180deg);
 }
 /* 头上的颜色 */
-.head::before {
+.head .headSkin {
     position: absolute;
     content: '';
     display: block;
@@ -341,6 +334,8 @@ body {
     border-radius: 52% 45% 56% 60%/65% 60% 40% 40%;
     transform:translate(-50%,-50%) rotate(5deg);
     margin-top:-60px;
+}
+.skinWrapper:first-child{
     z-index: 100;
 }
 .face>li{
