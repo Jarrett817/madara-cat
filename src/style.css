@@ -17,7 +17,6 @@ ul, li {
 }
 
 body {
-    background: rgb(230, 219, 189);
     min-height: 100vh;
 }
 
@@ -29,19 +28,45 @@ body {
 #controller {
     height: 10vh;
     width: 100%;
+    padding-top: 20px;
+    order:1;
+}
+#controller >button{
+    height: 32px;
+    padding: 0 12px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
     background: white;
+    color: #333;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: background 250ms;
+}
+#controller>button:hover,#controller>button:focus{
+    background: rgba(0, 0, 0, 0.1);
+    border:none;
+    outline: none;
+
 }
 
 #html-player {
     height: 45vh;
     width: 100%;
+    border-radius: 50px;
+    background: rgb(230, 219, 189);
 }
 
 /*对已定的三块区域进行布局*/
 #wrapper {
-    height: 100vh;
+    height: 100%;
+    width:100%;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    padding:20px;
 }
 
 /*控制按钮布局*/
@@ -66,6 +91,7 @@ body {
     #controller {
         height: 100%;
         width: 10vw;
+        padding:200px 0px 200px 15px;
     }
 
     #html-player {
@@ -88,6 +114,7 @@ body {
     height: 100%;
     width: 100%;
     left: 0;
+    top: 10px;
     /*border: 1px solid black;*/
 }
 
@@ -181,7 +208,7 @@ body {
     left: 50%;
     top: 50%;
     margin-top: -83px;
-    margin-left:-115px;
+    margin-left: -115px;
     /*transform: translate(-50%, -50%);*/
     border-radius: 45% 45% 40% 40%/60% 60% 35% 35%;
     display: flex;
@@ -213,7 +240,7 @@ body {
     display: block;
     border: 2px solid black;
     margin-left: 11px;
-    margin-top: 14px;
+    margin-top: 15px;
     width: 38px;
     height: 6px;
     border-color: black transparent transparent transparent;
@@ -236,7 +263,7 @@ body {
     content: '';
     display: block;
     border: 2px solid black;
-    margin-top: 14px;
+    margin-top: 15px;
     margin-left: 11px;
     width: 38px;
     height: 6px;
@@ -250,14 +277,14 @@ body {
     border: 2px solid black;
     width: 22px;
     height: 36px;
-    margin-left: 21px;
+    margin-left: 16px;
     margin-top: -17px;
     transform: translateY(-8px);
     background: black;
 }
 
 /*画耳朵*/
-.ear  {
+.ear {
     position: absolute;
     border: 2px solid black;
     top: 50%;
@@ -310,8 +337,6 @@ body {
     border: 2px solid black;
     width: 16px;
     height: 13px;
-    top: 50%;
-    left: 50%;
     margin-top: 70px;
     border-color: transparent transparent black transparent;
 }
@@ -324,6 +349,15 @@ body {
     transform: translate(-38%, -50%) rotate(-26deg) rotateY(180deg);
 }
 
+.nose {
+    position: absolute;
+}
+
+.nose:hover {
+    transform-origin: 50% 100%;
+    animation: shakeForNose 400ms 2 linear;
+}
+
 /* 头上的颜色 */
 .head::after {
     content: '';
@@ -333,13 +367,13 @@ body {
     display: block;
     top: 50%;
     left: 50%;
-    width: 100px;
-    height: 188px;
+    width: 90px;
+    height: 184px;
     background: linear-gradient(90deg,
     rgba(244, 173, 107, 1) 50%,
     rgba(122, 113, 108, 1) 50%);
     border-radius: 52% 45% 56% 60%/65% 60% 40% 40%;
-    transform: translate(-50%, -50%) rotate(5deg);
+    transform: translate(-51%, -50%) rotate(5deg);
     margin-top: -60px;
     z-index: 5;
 }
