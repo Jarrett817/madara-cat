@@ -119,22 +119,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 var string = "";
-var css1 = document.querySelector('.css1');
-var css2 = document.querySelector('.css2');
-var pre = document.querySelector('pre'); // css2.innerHTML = string
-// css1.innerText = string
-// console.log(css1)
-// let n = 1;
-// let id = setInterval(() => {
-//     n += 1
-//     if (n > string.length) {
-//         window.clearInterval(id)
-//         return
-//     }
-//     css1.innerText = string.substr(0, n)
-//     css2.innerHTML = string.substr(0, n)
-//     pre.scrollTop = pre.scrollHeight
-// }, 20)
+var fakeCss = document.querySelector('.fake-css');
+var realCss = document.querySelector('.real-css');
+var pre = document.querySelector('pre');
+var n = 1;
+var id = setInterval(function () {
+  n += 1;
+
+  if (n > string.length) {
+    window.clearInterval(id);
+    return;
+  }
+
+  fakeCss.innerText = string.substr(0, n);
+  realCss.innerHTML = string.substr(0, n);
+  pre.scrollTop = pre.scrollHeight;
+}, 20);
 },{}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -163,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57332" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49885" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
