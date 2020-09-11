@@ -196,14 +196,10 @@ const string=`
 .mouse .left {
     margin-left: -32px;
     transform: translate(52px, 15px) rotate(-6deg);
-    animation: shakeForLeft 800ms infinite linear;
-    transform-origin: 100% 100%;
 }
 
 .mouse .right {
     margin-left: -44px;
-    transform-origin: 100% 0%;
-    animation: shakeForRight 800ms infinite linear;
 }
 
 /*画鼻子*/
