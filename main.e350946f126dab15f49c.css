@@ -138,7 +138,15 @@ html {
         transform: translateY(-50%)
     }
 }
+.mouse .left {
+    animation: shakeForLeft 800ms infinite linear;
+    transform-origin: 100% 100%;
+}
 
+.mouse .right {
+    transform-origin: 100% 0%;
+    animation: shakeForRight 800ms infinite linear;
+}
 
 
 /*动画效果*/
