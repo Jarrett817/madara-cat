@@ -1,5 +1,5 @@
 import string from './catCss.js'
-
+import './style.css'
 
 //设定一个闹钟
 
@@ -11,7 +11,7 @@ const player = {
         realCss: document.querySelector('.real-css'),
         cssPlayer: document.querySelector('#css-player')
     },
-    n: 1,
+    n: 0,
 
     init: () => {
         player.bindEvents()
@@ -35,14 +35,19 @@ const player = {
         }
     },
     run: () => {
-        player.n += 1
-        if (player.n > string.length) {
+        let array = string.split('\n')
+        if (player.n > array.length-1) {
             window.clearInterval(player.id)
             return
         }
-        player.ui.fakeCss.innerText = string.substr(0, player.n)
-        player.ui.realCss.innerHTML = string.substr(0, player.n)
+
+        player.ui.fakeCss.innerText += array[player.n]+'\n'
+        player.ui.realCss.innerHTML += array[player.n]+'\n'
+        player.n += 1
+
+
         player.ui.cssPlayer.scrollTop = player.ui.cssPlayer.scrollHeight
+
     },
     start: () => {
         player.id = setInterval(player.run, player.level)
@@ -58,17 +63,19 @@ const player = {
     },
     normal: () => {
         player.stop()
-        player.level = 100
+        player.level = 150
         player.start()
     },
     fast: () => {
         player.stop()
-        player.level = 0
+        player.level = 50
         player.start()
     },
     replay: () => {
         player.stop()
-        player.n = 1
+        player.n = 0
+        player.ui.fakeCss.innerText =''
+        player.ui.realCss.innerHTML =''
         player.start()
     }
 }

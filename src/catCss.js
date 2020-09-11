@@ -1,35 +1,18 @@
+import left1 from './assets/images/pattern-left1.jpg'
+import left2 from './assets/images/pattern-left2.jpg'
+import right1 from './assets/images/pattern-right1.jpg'
+import right2 from './assets/images/pattern-right2.jpg'
+
 const string=`
-/*开始画猫*/
-#cat {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 10px;
-    /*border: 1px solid black;*/
-}
-
-@media (min-width: 500px) {
-    #cat {
-        padding-bottom: 100%;
-        width: 100%;
-        height: 0px;
-        top: 50%;
-        transform: translateY(-50%)
-    }
-}
-
-/*画猫身体*/
+/*开始画身体*/
 .catBody {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 280px;
     height: 252px;
     border: 2px solid black;
-
     border-radius: 280px 280px 120px 120px / 350px 347px 169px 182px;
     background: rgb(211, 201, 191);
     overflow: hidden;
@@ -59,7 +42,6 @@ const string=`
     left: 50%;
     margin-top: -70px;
 }
-
 
 .catBody > div {
     position: absolute;
@@ -198,6 +180,7 @@ const string=`
     transform: rotate(-6deg) rotateY(180deg);
 }
 
+/*画嘴巴*/
 .mouse > li {
     position: absolute;
     border: 2px solid black;
@@ -223,6 +206,7 @@ const string=`
     animation: shakeForRight 800ms infinite linear;
 }
 
+/*画鼻子*/
 .nose > li {
     position: absolute;
     border: 2px solid black;
@@ -249,7 +233,7 @@ const string=`
     animation: shakeForNose 400ms 2 linear;
 }
 
-/* 头上的颜色 */
+/* 画出头上的毛色 */
 .head::after {
     content: '';
     display: block;
@@ -269,6 +253,7 @@ const string=`
     z-index: 5;
 }
 
+/*注入灵魂，添加脸上的印记*/
 .face > li {
     position: absolute;
     top: 50%;
@@ -278,7 +263,7 @@ const string=`
 }
 
 .face .left1 {
-    background-image: url('./images/pattern-left1.jpg');
+    background-image: url('${left1}');
     width: 48px;
     height: 66px;
     margin-left: -100px;
@@ -286,7 +271,7 @@ const string=`
 }
 
 .face .left2 {
-    background-image: url('./images/pattern-left2.jpg');
+    background-image: url('${left2}');
     width: 34px;
     height: 84px;
     margin-left: -114px;
@@ -294,7 +279,7 @@ const string=`
 }
 
 .face .right1 {
-    background-image: url('./images/pattern-right1.jpg');
+    background-image: url('${right1}');
     width: 72px;
     height: 56px;
     margin-left: 58px;
@@ -302,12 +287,12 @@ const string=`
 }
 
 .face .right2 {
-    background-image: url('./images/pattern-right2.jpg');
+    background-image: url('${right2}');
     width: 34px;
     height: 86px;
     margin-left: 89px;
     margin-top: 0px;
 }
-
+/*完成！！*/
 `
 export default string
