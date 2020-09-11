@@ -178,6 +178,7 @@ const string=`
 .ear.right {
     margin-left: 24px;
     transform: rotate(-6deg) rotateY(180deg);
+    z-index:1;
 }
 
 /*画嘴巴*/
