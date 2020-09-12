@@ -223,9 +223,10 @@ const string = `
     position: absolute;
 }
 
-.nose:hover {
+.nose:active {
+    cursor:pointer;
     transform-origin: 50% 100%;
-    animation: shakeForNose 400ms 2 linear;
+    animation: shakeForNose 400ms 3 linear;
 }
 
 /* 画出头上的毛色 */
