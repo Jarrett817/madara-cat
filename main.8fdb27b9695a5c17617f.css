@@ -23,28 +23,35 @@ body {
 #css-player {
     height: 45vh;
     width: 100%;
-    top:0;
-    left:0;
-    margin-bottom:4px;
-    overflow-y: auto;
+    top: 0;
+    left: 0;
+    margin-bottom: 4px;
+    overflow: auto;
     /*火狐隐藏滚动条*/
-    scrollbar-width:none;
-
+    scrollbar-width: none;
 }
+
+pre, code {
+    white-space: pre-wrap;
+}
+
 html {
     /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
-    -ms-overflow-style:none;
+    -ms-overflow-style: none;
 }
-#css-player::-webkit-scrollbar{
+
+#css-player::-webkit-scrollbar {
     display: none;
 }
+
 #controller {
     height: 10vh;
     width: 100%;
     padding-top: 20px;
-    order:1;
+    order: 1;
 }
-#controller >button{
+
+#controller > button {
     height: 32px;
     padding: 0 12px;
     cursor: pointer;
@@ -58,7 +65,8 @@ html {
     border-radius: 4px;
     transition: background 250ms;
 }
-#controller>button:hover,#controller>button:focus{
+
+#controller > button:hover, #controller > button:focus {
     background: rgba(0, 0, 0, 0.1);
     /*border:transparent;*/
     outline: none;
@@ -75,11 +83,11 @@ html {
 /*对已定的三块区域进行布局*/
 #wrapper {
     height: 100%;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: fixed;
-    padding:20px;
+    padding: 20px;
 }
 
 /*控制按钮布局*/
@@ -104,7 +112,7 @@ html {
     #controller {
         height: 100%;
         width: 10vw;
-        padding:200px 0px 200px 15px;
+        padding: 200px 0px 200px 15px;
     }
 
     #html-player {
@@ -138,6 +146,7 @@ html {
         transform: translateY(-50%)
     }
 }
+
 .mouse .left {
     animation: shakeForLeft 800ms infinite linear;
     transform-origin: 100% 100%;
