@@ -3,7 +3,7 @@ import left2 from './assets/images/pattern-left2.jpg'
 import right1 from './assets/images/pattern-right1.jpg'
 import right2 from './assets/images/pattern-right2.jpg'
 
-const string=`
+const string = `
 /*开始画身体*/
 .catBody {
     position: absolute;
@@ -13,7 +13,8 @@ const string=`
     width: 280px;
     height: 252px;
     border: 2px solid black;
-    border-radius: 280px 280px 120px 120px / 350px 347px 169px 182px;
+    border-radius: 280px 280px 120px 120px 
+    / 350px 347px 169px 182px;
     background: rgb(211, 201, 191);
     overflow: hidden;
 }
@@ -82,7 +83,6 @@ const string=`
     top: 50%;
     margin-top: -83px;
     margin-left: -115px;
-    /*transform: translate(-50%, -50%);*/
     border-radius: 45% 45% 40% 40%/60% 60% 35% 35%;
     display: flex;
     justify-content: center;
@@ -157,28 +157,26 @@ const string=`
 }
 
 /*画耳朵*/
-.ear {
+.ear>div {
     position: absolute;
+    top:50%;
+    left:50%;
     border: 2px solid black;
-    top: 50%;
-    left: 50%;
-    border-radius: 3% 97% 85% 15% / 31% 42% 58% 69%;
-    border-color: black transparent transparent black;
     background: white;
     width: 80px;
     height: 89px;
-    margin-top: -96px;
 }
 
-.ear.left {
-    margin-left: -104px;
-    transform: rotate(6deg);
+.ear .left {
+    border-radius: 3% 97% 85% 15% / 31% 42% 58% 69%;
+    border-color: black transparent transparent black;
+    transform: translate(-105px,-96px) rotate(6deg);
 }
 
-.ear.right {
-    margin-left: 24px;
-    transform: rotate(-6deg) rotateY(180deg);
-    z-index:1;
+.ear .right {
+    border-radius: 97% 3% 15% 85% / 42% 31% 69% 58%;
+    border-color: black black transparent transparent;
+    transform: translate(26px,-94px) rotate(-6deg);
 }
 
 /*画嘴巴*/
@@ -255,6 +253,7 @@ const string=`
     position: absolute;
     top: 50%;
     left: 50%;
+    border-radius:0px;
     transform: scale(0.4) translate(-50%, -50%);
     background-repeat: no-repeat;
 }
