@@ -134,18 +134,28 @@ html {
     width: 100%;
     left: 0;
     top: 10px;
-    /*border: 1px solid black;*/
 }
-
-@media (min-width: 500px) {
-    #cat {
-        padding-bottom: 100%;
-        width: 100%;
-        height: 0px;
-        top: 50%;
-        transform: translateY(-50%)
+@media screen and (min-width:500px ) and ( max-width : 690px){
+    #cat{
+        transform: scale(0.7);
     }
 }
+@media screen and (max-width : 325px) {
+#cat{
+    transform: scale(0.7);
+}
+
+}
+
+/*@media (min-width: 500px) {*/
+/*    #cat {*/
+/*        padding-bottom: 100%;*/
+/*        width: 100%;*/
+/*        height: 0px;*/
+/*        top: 50%;*/
+/*        transform: translateY(-50%)*/
+/*    }*/
+/*}*/
 
 .mouse .left {
     animation: shakeForLeft 800ms infinite linear;
