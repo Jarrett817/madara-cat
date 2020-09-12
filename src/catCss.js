@@ -223,7 +223,7 @@ const string = `
     position: absolute;
 }
 
-.nose:active {
+.nose:hover {
     cursor:pointer;
     transform-origin: 50% 100%;
     animation: shakeForNose 400ms 3 linear;
