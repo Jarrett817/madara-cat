@@ -18,6 +18,7 @@ ul, li {
 
 body {
     min-height: 100vh;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #css-player {
@@ -135,15 +136,17 @@ html {
     left: 0;
     top: 10px;
 }
-@media screen and (min-width:500px ) and ( max-width : 690px){
-    #cat{
+
+@media screen and (min-width: 500px ) and ( max-width: 690px) {
+    #cat {
         transform: scale(0.7);
     }
 }
-@media screen and (max-width : 325px) {
-#cat{
-    transform: scale(0.7);
-}
+
+@media screen and (max-width: 325px) {
+    #cat {
+        transform: scale(0.7);
+    }
 
 }
 
